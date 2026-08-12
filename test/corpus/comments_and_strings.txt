@@ -1,0 +1,24 @@
+================================================================================
+comments and string interpolation, including block-keyword lookalikes inside strings/comments
+================================================================================
+plan SamplePlan;
+    // a line comment mentioning endfeature and endplan
+    feature Root;
+        /* block comment with feature endfeature inside */
+        description = "text with // not a comment and ${objpath} interpolation";
+    endfeature
+endplan
+
+---
+
+(source_file
+  (plan_block
+    name: (identifier)
+    (comment)
+    (feature_block
+      name: (identifier)
+      (comment)
+      (assignment_statement
+        target: (path
+          (identifier))
+        value: (string)))))

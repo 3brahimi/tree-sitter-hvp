@@ -1,0 +1,22 @@
+================================================================================
+override block with a full hierarchical-path assignment
+================================================================================
+override milestone_1;
+    myplan.DVD_RW.Line = Line > 85%;
+endoverride
+
+---
+
+(source_file
+  (override_block
+    name: (identifier)
+    (assignment_statement
+      target: (path
+        (identifier)
+        (identifier)
+        (identifier))
+      value: (binary_expression
+        (path
+          (identifier))
+        (number
+          (percent))))))

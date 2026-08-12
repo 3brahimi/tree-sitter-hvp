@@ -1,0 +1,61 @@
+================================================================================
+until / elseuntil / else 3-way branch wrapping override blocks
+================================================================================
+until 1-31-2014;
+    override relaxed_group_goal;
+        new.top.Group = Group > 40%;
+    endoverride
+elseuntil 04-30-2014;
+    override relaxed_group_goal;
+        new.top.Group = Group > 60%;
+    endoverride
+else;
+    override relaxed_group_goal;
+        new.top.Group = Group >= 100%;
+    endoverride
+enduntil
+
+---
+
+(source_file
+  (until_block
+    date: (date)
+    (override_block
+      name: (identifier)
+      (assignment_statement
+        target: (path
+          (identifier)
+          (identifier)
+          (identifier))
+        value: (binary_expression
+          (path
+            (identifier))
+          (number
+            (percent)))))
+    (elseuntil_clause
+      date: (date)
+      (override_block
+        name: (identifier)
+        (assignment_statement
+          target: (path
+            (identifier)
+            (identifier)
+            (identifier))
+          value: (binary_expression
+            (path
+              (identifier))
+            (number
+              (percent))))))
+    (else_clause
+      (override_block
+        name: (identifier)
+        (assignment_statement
+          target: (path
+            (identifier)
+            (identifier)
+            (identifier))
+          value: (binary_expression
+            (path
+              (identifier))
+            (number
+              (percent))))))))

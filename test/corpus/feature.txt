@@ -1,0 +1,31 @@
+================================================================================
+nested feature blocks with attribute-value overrides
+================================================================================
+plan P;
+    feature system;
+        phase = 1;
+        feature block1;
+            weight = 2;
+        endfeature
+    endfeature
+endplan
+
+---
+
+(source_file
+  (plan_block
+    name: (identifier)
+    (feature_block
+      name: (identifier)
+      (assignment_statement
+        target: (path
+          (identifier))
+        value: (number
+          (integer)))
+      (feature_block
+        name: (identifier)
+        (assignment_statement
+          target: (path
+            (identifier))
+          value: (number
+            (integer)))))))

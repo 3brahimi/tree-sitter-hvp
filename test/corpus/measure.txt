@@ -1,0 +1,31 @@
+================================================================================
+measure with multiple metrics and multiple sources
+================================================================================
+plan P;
+    feature f;
+        measure Line, Cond, Group m_cov;
+            source = "instance: top.cpu", "instance: top.reg";
+        endmeasure
+    endfeature
+endplan
+
+---
+
+(source_file
+  (plan_block
+    name: (identifier)
+    (feature_block
+      name: (identifier)
+      (measure_block
+        metrics: (metric_reference_list
+          (path
+            (identifier))
+          (path
+            (identifier))
+          (path
+            (identifier)))
+        name: (identifier)
+        (source_statement
+          value: (source_list
+            (string)
+            (string)))))))

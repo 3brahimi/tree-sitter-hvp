@@ -1,0 +1,36 @@
+================================================================================
+goal expression operator precedence: * / > + - > comparison > ! > && > ||
+================================================================================
+plan P;
+    metric integer x;
+        goal = a + b * c > d && !e || f;
+    endmetric
+endplan
+
+---
+
+(source_file
+  (plan_block
+    name: (identifier)
+    (metric_block
+      type: (type_keyword)
+      name: (identifier)
+      (goal_statement
+        value: (binary_expression
+          (binary_expression
+            (binary_expression
+              (binary_expression
+                (path
+                  (identifier))
+                (binary_expression
+                  (path
+                    (identifier))
+                  (path
+                    (identifier))))
+              (path
+                (identifier)))
+            (unary_expression
+              (path
+                (identifier))))
+          (path
+            (identifier)))))))

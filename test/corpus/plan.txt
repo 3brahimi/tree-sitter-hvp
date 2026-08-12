@@ -1,0 +1,33 @@
+================================================================================
+plan with a nested empty feature
+================================================================================
+plan SamplePlan;
+    feature Root;
+    endfeature
+endplan
+
+---
+
+(source_file
+  (plan_block
+    name: (identifier)
+    (feature_block
+      name: (identifier))))
+
+================================================================================
+plan with a subplan reference and parameters
+================================================================================
+plan cpu_plan;
+    subplan cache_plan #(root_mod="top.");
+endplan
+
+---
+
+(source_file
+  (plan_block
+    name: (identifier)
+    (subplan_statement
+      name: (identifier)
+      (subplan_parameter
+        name: (identifier)
+        value: (string)))))

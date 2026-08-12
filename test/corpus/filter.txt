@@ -1,0 +1,29 @@
+================================================================================
+filter block with remove/keep feature-where statements
+================================================================================
+filter my_view;
+    remove feature where phase > 2;
+    keep feature where router_fabric == "N1" || router_fabric == "N2";
+endfilter
+
+---
+
+(source_file
+  (filter_block
+    name: (identifier)
+    (filter_statement
+      condition: (binary_expression
+        (path
+          (identifier))
+        (number
+          (integer))))
+    (filter_statement
+      condition: (binary_expression
+        (binary_expression
+          (path
+            (identifier))
+          (string))
+        (binary_expression
+          (path
+            (identifier))
+          (string))))))

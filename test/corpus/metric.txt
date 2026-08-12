@@ -1,0 +1,68 @@
+================================================================================
+metric with an enum type, aggregator and goal
+================================================================================
+plan P;
+    metric enum {pass, fail} uniq;
+        aggregator = uniquesum;
+        goal = (uniq.fail <= 0);
+    endmetric
+endplan
+
+---
+
+(source_file
+  (plan_block
+    name: (identifier)
+    (metric_block
+      type: (enum_type
+        (enum_member
+          (identifier))
+        (enum_member
+          (identifier)))
+      name: (identifier)
+      (aggregator_statement
+        value: (identifier))
+      (goal_statement
+        value: (parenthesized_expression
+          (binary_expression
+            (path
+              (identifier)
+              (identifier))
+            (number
+              (integer))))))))
+
+================================================================================
+metric with an aggregate type and per-submetric weights
+================================================================================
+plan P;
+    metric aggregate {Line(weight=1.0), Cond(weight=2.0)} MyAgg_Line_Cond;
+        apply = explicit;
+        goal = (MyAgg_Line_Cond > 0.1);
+    endmetric
+endplan
+
+---
+
+(source_file
+  (plan_block
+    name: (identifier)
+    (metric_block
+      type: (aggregate_type
+        (aggregate_member
+          name: (identifier)
+          weight: (number
+            (float)))
+        (aggregate_member
+          name: (identifier)
+          weight: (number
+            (float))))
+      name: (identifier)
+      (apply_statement
+        value: (identifier))
+      (goal_statement
+        value: (parenthesized_expression
+          (binary_expression
+            (path
+              (identifier))
+            (number
+              (float))))))))
