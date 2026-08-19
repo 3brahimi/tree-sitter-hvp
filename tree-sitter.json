@@ -18,10 +18,10 @@
     "license": "MIT",
     "description": "Tree-sitter grammar for the HVP (Hierarchical Verification Plan) language, used by zed-hvp for real syntax highlighting (see ../MIGRATION.md).",
     "authors": [
-      { "name": "[Your Name]" }
+      { "name": "Ilia Barkov" }
     ],
     "links": {
-      "repository": "https://github.com/<your-username>/tree-sitter-hvp"
+      "repository": "https://github.com/Zvord/tree-sitter-hvp"
     }
   },
   "bindings": {

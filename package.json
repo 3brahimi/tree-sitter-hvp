@@ -4,7 +4,7 @@
   "description": "Tree-sitter grammar for the HVP (Hierarchical Verification Plan) language",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/<your-username>/tree-sitter-hvp.git"
+    "url": "git+https://github.com/Zvord/tree-sitter-hvp.git"
   },
   "keywords": [
     "incremental",
@@ -14,7 +14,7 @@
     "verification-plan"
   ],
   "author": {
-    "name": "[Your Name]"
+    "name": "Ilia Barkov"
   },
   "license": "MIT",
   "files": [

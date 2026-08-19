@@ -70,6 +70,9 @@ the language spec (`../hvp-documentation/Using the HVP Language.md`).
 
 ## Publishing
 
-Not done — same deferred-to-a-human pattern as the rest of this migration (see
-`../MIGRATION.md`'s Open questions). `package.json`/`tree-sitter.json` still carry
-placeholder `<your-username>`/`[Your Name]` identity fields.
+`package.json`/`tree-sitter.json` now carry real identity fields, and this repo has a
+real git remote (`github.com/Zvord/tree-sitter-hvp`) — that's what `zed-hvp/extension.toml`'s
+`[grammars.hvp]` points at, pinned to a commit SHA rather than depending on an npm
+publish. An actual `npm publish` of this package (for consumers that want the grammar via
+npm instead of git) is still not done — same deferred-to-a-human pattern as the rest of
+this migration (see `../MIGRATION.md`'s Open questions).
