@@ -2,3 +2,9 @@ node_modules/
 build/
 *.wasm
 *.tgz
+
+# Python binding build outputs
+*.egg-info/
+__pycache__/
+*.so
+dist/

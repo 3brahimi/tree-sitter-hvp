@@ -1,0 +1,29 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [ "setuptools>=62.4.0", "wheel" ]
+
+[project]
+authors = [ { name = "Ilia Barkov" } ]
+classifiers = [
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Compilers",
+  "Topic :: Text Processing :: Linguistic",
+  "Typing :: Typed",
+]
+description = "HVP (Hierarchical Verification Plan) grammar for tree-sitter"
+keywords = [ "incremental", "parsing", "tree-sitter", "hvp" ]
+license.text = "MIT"
+name = "tree-sitter-hvp"
+readme = "README.md"
+requires-python = ">=3.10"
+version = "0.1.0"
+
+[project.urls]
+Homepage = "https://github.com/Zvord/tree-sitter-hvp"
+
+[project.optional-dependencies]
+core = [ "tree-sitter>=0.25" ]
+
+[tool.cibuildwheel]
+build = "cp310-*"
+build-frontend = "build"
