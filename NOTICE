@@ -2,7 +2,7 @@ tree-sitter-hvp
 The grammar is a fork of Zvord/tree-sitter-hvp, MIT License, Copyright (c) 2026 Ilia Barkov.
 Full text: LICENSE-UPSTREAM. That grammar code stays under the MIT License.
 
-Our additions are Copyright (c) 2026 3brahimi and licensed under the PolyForm Noncommercial License 1.0.0 (see LICENSE):
+Our additions are Copyright (c) 2026 Masoud Ebrahimi and licensed under the PolyForm Noncommercial License 1.0.0 (see LICENSE):
 the Python binding (bindings/python/, pyproject.toml, setup.py, .gitattributes, .gitignore) and later changes.
 
 Python binding boilerplate follows the tree-sitter CLI templates (MIT, Copyright (c) 2018 Max Brunsfeld).
