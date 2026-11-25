@@ -15,7 +15,7 @@
   ],
   "metadata": {
     "version": "0.1.0",
-    "license": "PolyForm-Noncommercial-1.0.0",
+    "license": "PolyForm-Noncommercial-1.0.0 AND MIT",
     "description": "Tree-sitter grammar for the HVP (Hierarchical Verification Plan) language, used by zed-hvp for real syntax highlighting (see ../MIGRATION.md).",
     "authors": [
       { "name": "Ilia Barkov" }

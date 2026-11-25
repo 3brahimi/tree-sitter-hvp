@@ -12,7 +12,7 @@ classifiers = [
 ]
 description = "HVP (Hierarchical Verification Plan) grammar for tree-sitter"
 keywords = [ "incremental", "parsing", "tree-sitter", "hvp" ]
-license.text = "PolyForm-Noncommercial-1.0.0"
+license.text = "PolyForm-Noncommercial-1.0.0 AND MIT"
 name = "tree-sitter-hvp"
 readme = "README.md"
 requires-python = ">=3.10"
