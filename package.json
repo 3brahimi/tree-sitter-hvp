@@ -16,7 +16,7 @@
   "author": {
     "name": "Ilia Barkov"
   },
-  "license": "MIT",
+  "license": "PolyForm-Noncommercial-1.0.0",
   "files": [
     "grammar.js",
     "tree-sitter.json",

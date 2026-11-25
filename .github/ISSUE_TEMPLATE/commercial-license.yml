@@ -1,0 +1,31 @@
+name: Commercial license request
+description: Ask for permission to use tree-sitter-hvp commercially.
+title: "Commercial license: <company or project>"
+labels: ["commercial-license"]
+body:
+  - type: markdown
+    attributes:
+      value: >
+        tree-sitter-hvp is free for noncommercial use under the PolyForm
+        Noncommercial License 1.0.0. Commercial use needs a license from
+        the author, granted by a reply on this issue. To keep the request
+        private, email masoud.ebrahimi@formaltrust.ai instead.
+  - type: input
+    id: licensee
+    attributes:
+      label: Licensee (company or person)
+    validations:
+      required: true
+  - type: textarea
+    id: use
+    attributes:
+      label: Product and intended use
+      description: What you build with the grammar and how you ship it.
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: Contact for license terms
+    validations:
+      required: true

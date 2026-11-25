@@ -1,6 +1,6 @@
 /**
  * @file HVP (Hierarchical Verification Plan) grammar for tree-sitter
- * @license MIT
+ * @license PolyForm-Noncommercial-1.0.0
  *
  * HVP is line-oriented with seven bracket-like block-pair keywords
  * (plan/endplan, feature/endfeature, metric/endmetric, measure/endmeasure,
